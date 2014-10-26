@@ -1,0 +1,35 @@
+
+context MediaCollection {
+	constraint NameUniqueness {
+	
+		guard: self.name <> ""
+		check:  MediaCollection.all.one(i|i.name == self.name)
+		message: "Collection name must be unique"
+		fix {
+			title: "Rename to " + self.getFirstUniqueName()
+			do {
+				self.name = self.getFirstUniqueName();
+			}
+		}
+	}
+}
+
+context Artifact {
+	constraint HasName {
+		check: self.name <> ""
+		message: "Element" + self + " must have a name"
+	}
+	constraint NameStartsWithUppercase {
+		guard: self.satisfies("HasName")
+		check: self.name.substring(0,1) == self.name.substring(0,1).toUpperCase()
+	}
+}
+
+@cached
+operation MediaCollection getFirstUniqueName() : String {
+	var i = 0;
+	while (MediaCollection.all.select(i|i.name == self.name + i).size() > 0) {
+		i = i + 1;
+	}
+	return self.name + i;
+}
