@@ -1,0 +1,39 @@
+
+Library.all.first().getTotalSongDuration().println();
+Library.all.first().getAllArtifactsOriginatingInAStore().println();
+
+/*
+	Calculate the total running time of all songs in a librar
+*/
+
+operation Library getTotalSongDuration() : Integer {
+	var songs : Set;
+	// get songs from each collection
+	for (collection in self.collections) {
+		//TODO: is there a better way of doing this?
+		songs.add(collection.members.select(i : MusicTrack | true));
+	}
+	
+	var totalDuration : Integer = 0;
+	// songs is a collection of collections, flatten it
+	for (song in songs.flatten()) {
+		totalDuration = totalDuration + song.duration;
+	}
+	// totalDuration now represents aggregated len of all songs
+	return totalDuration;
+}
+
+
+/*
+	Calculate the total running time of all songs in a library
+*/
+
+operation Library getAllArtifactsOriginatingInAStore() : Set {
+	var allMembers : Set;
+	// collate all members
+	for (collection in self.collections) {
+		allMembers.add(collection.members);
+	}
+	// return all the members whose origin is a Store
+	return allMembers.flatten().select(i| i.origin.isTypeOf(Store)).asSet();
+}

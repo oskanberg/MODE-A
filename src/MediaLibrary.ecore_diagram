@@ -140,7 +140,7 @@
       <layoutConstraint xmi:type="notation:Ratio" xmi:id="_QrrgcV0UEeSYUZiUsZURzA" value="0.23076923076923078"/>
     </children>
     <element xmi:type="ecore:EClass" href="MediaLibrary.ecore#//Ebook"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GniiCl0UEeSYUZiUsZURzA" x="305" y="435" width="61"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GniiCl0UEeSYUZiUsZURzA" x="325" y="435" width="61"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_GnjwIF0UEeSYUZiUsZURzA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_GnjwIl0UEeSYUZiUsZURzA" type="5001"/>
@@ -157,7 +157,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_GnkXNV0UEeSYUZiUsZURzA"/>
     </children>
     <element xmi:type="ecore:EClass" href="MediaLibrary.ecore#//Image"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GnjwIV0UEeSYUZiUsZURzA" x="377" y="436" width="61"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GnjwIV0UEeSYUZiUsZURzA" x="397" y="436" width="84"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_GnkXNl0UEeSYUZiUsZURzA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_Gnk-QF0UEeSYUZiUsZURzA" type="5001"/>
@@ -204,7 +204,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_GnnaiF0UEeSYUZiUsZURzA"/>
     </children>
     <element xmi:type="ecore:EClass" href="MediaLibrary.ecore#//ExternalSource"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GnmzdF0UEeSYUZiUsZURzA" x="125" y="90"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GnmzdF0UEeSYUZiUsZURzA" x="125" y="75"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_GnnaiV0UEeSYUZiUsZURzA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_GnoBkF0UEeSYUZiUsZURzA" type="5001"/>
@@ -221,7 +221,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_GnoBmV0UEeSYUZiUsZURzA"/>
     </children>
     <element xmi:type="ecore:EClass" href="MediaLibrary.ecore#//Store"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gnnail0UEeSYUZiUsZURzA" x="260" y="75"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Gnnail0UEeSYUZiUsZURzA" x="300" y="60"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Rz920F0XEeSYUZiUsZURzA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_Rz920l0XEeSYUZiUsZURzA" type="5001"/>
@@ -309,7 +309,7 @@
       <layoutConstraint xmi:type="notation:Ratio" xmi:id="_1okS4V0oEeSYUZiUsZURzA" value="0.23076923076923078"/>
     </children>
     <element xmi:type="ecore:EClass" href="MediaLibrary.ecore#//Ecosystem"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwd-QV0nEeSYUZiUsZURzA" x="380" y="130"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwd-QV0nEeSYUZiUsZURzA" x="405" y="155"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_ZeELAF0zEeSYUZiUsZURzA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_ZeELAl0zEeSYUZiUsZURzA" type="5001"/>

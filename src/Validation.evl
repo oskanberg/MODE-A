@@ -1,14 +1,25 @@
 
 context MediaCollection {
 	constraint NameUniqueness {
-	
 		guard: self.name <> ""
 		check:  MediaCollection.all.one(i|i.name == self.name)
 		message: "Collection name must be unique"
 		fix {
 			title: "Rename to " + self.getFirstUniqueName()
-			do {
+			do{
 				self.name = self.getFirstUniqueName();
+			}
+		}
+	}
+	
+	constraint HostIsAlsoSynchronised {
+		check: self.syncedDevices.one(i|i == self.host)
+		message: "Host (" + self.host + ") is not one of the synchronised devices of " + self
+		fix {
+			title: "Make host a synchronised device" 
+			do {
+				self.syncedDevices.add(self.host);
+				self.host.collections.add(self);
 			}
 		}
 	}
@@ -22,12 +33,15 @@ context Artifact {
 	constraint NameStartsWithUppercase {
 		guard: self.satisfies("HasName")
 		check: self.name.substring(0,1) == self.name.substring(0,1).toUpperCase()
+		message: "Artifact " + self + " name needs to begin with uppercase" 
 	}
 }
 
+
+// cache so check and message don't recalculate
 @cached
 operation MediaCollection getFirstUniqueName() : String {
-	var i = 0;
+	var i : Integer = 0;
 	while (MediaCollection.all.select(i|i.name == self.name + i).size() > 0) {
 		i = i + 1;
 	}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MediaLibrary:Ecosystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MediaLibrary="MediaLibrary" xmi:id="_27ys8F02EeSXO-T1wNlC-A">
+  <libraries xmi:id="_B7EzEF05EeSXO-T1wNlC-A" name="Thompson's Fantastic Collections">
+    <collections xmi:id="_HoZiQF05EeSXO-T1wNlC-A" name="Best Audiobooks" members="_YFxlkF03EeSXO-T1wNlC-A" host="_4QufkF02EeSXO-T1wNlC-A" syncedDevices="_5IB7AF02EeSXO-T1wNlC-A _5sIGkF02EeSXO-T1wNlC-A"/>
+    <collections xmi:id="_ZIcRkF05EeSXO-T1wNlC-A" name="Best Photos" members="_Y1AqIF03EeSXO-T1wNlC-A" host="_5IB7AF02EeSXO-T1wNlC-A" syncedDevices="_4QufkF02EeSXO-T1wNlC-A _4p-tEF02EeSXO-T1wNlC-A _5IB7AF02EeSXO-T1wNlC-A _5sIGkF02EeSXO-T1wNlC-A"/>
+    <collections xmi:id="_d2lmQF06EeSXO-T1wNlC-A" name="Best Photos" members="_Y1AqIF03EeSXO-T1wNlC-A _ZpVqEF03EeSXO-T1wNlC-A" host="_5sIGkF02EeSXO-T1wNlC-A" syncedDevices="_4QufkF02EeSXO-T1wNlC-A"/>
+    <collections xmi:id="_jOrhwF05EeSXO-T1wNlC-A" name="Things to show Sonya" members="_Y1AqIF03EeSXO-T1wNlC-A _ZpVqEF03EeSXO-T1wNlC-A _azkokF03EeSXO-T1wNlC-A" host="_4p-tEF02EeSXO-T1wNlC-A" syncedDevices="_5IB7AF02EeSXO-T1wNlC-A _5sIGkF02EeSXO-T1wNlC-A"/>
+  </libraries>
+  <devices xsi:type="MediaLibrary:Computer" xmi:id="_4QufkF02EeSXO-T1wNlC-A" MACAddress="e1:26:2d:56:4f:34" resolutionWidth="760" resolutionHeight="1920" hostOf="_HoZiQF05EeSXO-T1wNlC-A" collections="_ZIcRkF05EeSXO-T1wNlC-A _d2lmQF06EeSXO-T1wNlC-A"/>
+  <devices xsi:type="MediaLibrary:EReader" xmi:id="_4p-tEF02EeSXO-T1wNlC-A" MACAddress="00:26:2d:53:43:24" resolutionWidth="200" resolutionHeight="200" hostOf="_jOrhwF05EeSXO-T1wNlC-A" collections="_ZIcRkF05EeSXO-T1wNlC-A" videoEnabled="false" audioEnabled="false"/>
+  <devices xsi:type="MediaLibrary:Smartphone" xmi:id="_5IB7AF02EeSXO-T1wNlC-A" MACAddress="00:26:2d:56:40:35" resolutionWidth="200" resolutionHeight="700" hostOf="_ZIcRkF05EeSXO-T1wNlC-A" collections="_HoZiQF05EeSXO-T1wNlC-A _ZIcRkF05EeSXO-T1wNlC-A _jOrhwF05EeSXO-T1wNlC-A"/>
+  <devices xsi:type="MediaLibrary:Tablet" xmi:id="_5sIGkF02EeSXO-T1wNlC-A" MACAddress="00:92:2d:ff:40:ff" resolutionWidth="700" resolutionHeight="980" hostOf="_d2lmQF06EeSXO-T1wNlC-A" collections="_HoZiQF05EeSXO-T1wNlC-A _ZIcRkF05EeSXO-T1wNlC-A _jOrhwF05EeSXO-T1wNlC-A"/>
+  <mediaSources xsi:type="MediaLibrary:ExternalSource" xmi:id="_bbEtcF03EeSXO-T1wNlC-A" contents="_Y1AqIF03EeSXO-T1wNlC-A _azkokF03EeSXO-T1wNlC-A"/>
+  <mediaSources xsi:type="MediaLibrary:Store" xmi:id="_cHfukF03EeSXO-T1wNlC-A" contents="_ZpVqEF03EeSXO-T1wNlC-A _YFxlkF03EeSXO-T1wNlC-A" name="Itunes" url="www.itunes.com"/>
+  <mediaArtifacts xsi:type="MediaLibrary:AudioBook" xmi:id="_YFxlkF03EeSXO-T1wNlC-A" name="Lord of the Things" author="Rt. Hon. Kleino Jr." origin="_cHfukF03EeSXO-T1wNlC-A" duration="5436344" currentPosition="124241"/>
+  <mediaArtifacts xsi:type="MediaLibrary:Image" xmi:id="_Y1AqIF03EeSXO-T1wNlC-A" name="VJ Day in Times Square" author="Alfred Eisenstaedt" origin="_bbEtcF03EeSXO-T1wNlC-A" dateTaken="14 August 1945"/>
+  <mediaArtifacts xsi:type="MediaLibrary:MusicTrack" xmi:id="_ZpVqEF03EeSXO-T1wNlC-A" name="My Favourite Biscuits" author="Gottfried Leibniz" origin="_cHfukF03EeSXO-T1wNlC-A" duration="1000001" label="L-L-L-L-Leibniz!"/>
+  <mediaArtifacts xsi:type="MediaLibrary:Video" xmi:id="_azkokF03EeSXO-T1wNlC-A" name="A Trip to the Moon" author="Georges M&#xe9;li&#xe8;s" origin="_bbEtcF03EeSXO-T1wNlC-A" duration="960000" fps="14"/>
+</MediaLibrary:Ecosystem>

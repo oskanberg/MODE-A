@@ -20,16 +20,17 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="members" lowerBound="1"
         upperBound="-1" eType="#//Artifact"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="host" lowerBound="1" eType="#//Device"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="syncedDevices" upperBound="-1"
-        eType="#//Device" eOpposite="#//Device/collections"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="host" lowerBound="1" eType="#//Device"
+        eOpposite="#//Device/hostOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="syncedDevices" lowerBound="1"
+        upperBound="-1" eType="#//Device" eOpposite="#//Device/collections"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Device" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="MACAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolutionWidth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolutionHeight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hostOf" upperBound="-1"
-        eType="#//MediaCollection"/>
+        eType="#//MediaCollection" eOpposite="#//MediaCollection/host"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collections" upperBound="-1"
         eType="#//MediaCollection" eOpposite="#//MediaCollection/syncedDevices"/>
   </eClassifiers>
@@ -58,8 +59,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="Video" eSuperTypes="#//DurationArtifact">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fps" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ebook" eSuperTypes="#//Artifact"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Artifact"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Ebook" eSuperTypes="#//Artifact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pages" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//Artifact">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateTaken" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MediaSource" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
         eType="#//Artifact" eOpposite="#//Artifact/origin"/>

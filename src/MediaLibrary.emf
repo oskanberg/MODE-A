@@ -18,8 +18,8 @@ class MediaCollection {
 	attr String name;
 	ref Artifact[1..*] members;
 	// host is the device that can sync
-	ref Device[1] host;
-	ref Device[*]#collections syncedDevices;
+	ref Device[1]#hostOf host;
+	ref Device[1..*]#collections syncedDevices;
 }
 
 /***** Devices ****/
@@ -28,7 +28,7 @@ abstract class Device {
 	attr String MACAddress;
 	attr int resolutionWidth;
 	attr int resolutionHeight;
-	ref MediaCollection[*] hostOf;
+	ref MediaCollection[*]#host hostOf;
 	ref MediaCollection[*]#syncedDevices collections;
 }
 
@@ -74,10 +74,10 @@ class Video extends DurationArtifact {
 
 // things that do not have duration
 class Ebook extends Artifact {
-	//TODO: put some reasonable things in here
+	attr int pages;
 }
 class Image extends Artifact {
-	//TODO: put some reasonable things in here
+	attr String dateTaken;
 }
 
 
