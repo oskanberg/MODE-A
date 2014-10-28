@@ -7,19 +7,17 @@ Library.all.first().getAllArtifactsOriginatingInAStore().println();
 */
 
 operation Library getTotalSongDuration() : Integer {
-	var songs : Set;
-	// get songs from each collection
-	for (collection in self.collections) {
-		//TODO: is there a better way of doing this?
-		songs.add(collection.members.select(i : MusicTrack | true));
-	}
+	
+	// collect all MusicTracks from all collections
+	// not sure if this is idiomatic - could also use a loop and add to new collection
+	var songs = self.collections.members.flatten().collect(i : MusicTrack| i);
 	
 	var totalDuration : Integer = 0;
 	// songs is a collection of collections, flatten it
 	for (song in songs.flatten()) {
 		totalDuration = totalDuration + song.duration;
 	}
-	// totalDuration now represents aggregated len of all songs
+	// totalDuration now represents aggregated len of all songs (even duplicates)
 	return totalDuration;
 }
 
@@ -29,11 +27,8 @@ operation Library getTotalSongDuration() : Integer {
 */
 
 operation Library getAllArtifactsOriginatingInAStore() : Set {
-	var allMembers : Set;
-	// collate all members
-	for (collection in self.collections) {
-		allMembers.add(collection.members);
-	}
+	// collect all members from collections
+	var allMembers = self.collections.members.flatten();
 	// return all the members whose origin is a Store
 	return allMembers.flatten().select(i| i.origin.isTypeOf(Store)).asSet();
 }

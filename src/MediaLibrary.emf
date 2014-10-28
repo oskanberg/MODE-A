@@ -58,7 +58,7 @@ abstract class Artifact {
 // things that have duration 
 abstract class DurationArtifact extends Artifact {
 	// duration is in miliseconds
-	// on 64-bit, that's max ~597h
+	// on int64, that's max ~597h
 	attr int duration;
 }
 

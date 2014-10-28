@@ -37,6 +37,12 @@ context Artifact {
 	}
 }
 
+context EReader {
+	constraint AllMediaAreCompatible {
+		guard: not self.videoEnabled or not self.audioEnabled
+		//TODO
+	}
+}
 
 // cache so check and message don't recalculate
 @cached
